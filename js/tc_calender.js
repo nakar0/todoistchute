@@ -97,6 +97,9 @@ class TodoistApi {
   }
 
   calcTime(task) {
+    // priority 4なら計算しない
+    if (task.priority === 4) return null;
+
     let t_label;
     let t_text;
     // ラベルから集計
